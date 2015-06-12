@@ -1,20 +1,21 @@
-[
+exports.vote = [
     {
         "name": "Alabama",
         "abbreviation": "AL",
         "info" : {
-          "registration" : {
-            "deadline" : "Postmarked 11 days before election",
-            "link: : "http://www.alabamavotes.gov/GetRegForm.aspx?m=voters",
-          }
-          "primary" : {
-            "closed" : "true",
-            "date" : "2016-03-08",
-            "seventeen" : "false",
-          },
-          "general" : {
-            "link" : "http://www.alabamavotes.gov/"
-          }
+            "registration" : {
+                "deadline" : "Postmarked 11 days before election",
+                "link" : "http://www.alabamavotes.gov/GetRegForm.aspx?m=voters",
+            },
+            "primary" : {
+                "closed" : "true",
+                "date" : "2016-03-08",
+                "seventeen" : "false",
+            },
+            "general" : {
+                "link" : "http://www.alabamavotes.gov/",
+            },
+        },
     },
     {
         "name": "Alaska",

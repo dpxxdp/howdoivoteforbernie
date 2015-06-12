@@ -1,4 +1,4 @@
-[
+exports.primary = [
     {
         "name": "Alabama",
         "abbreviation": "AL",
