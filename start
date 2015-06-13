@@ -1,0 +1,3 @@
+#!/bin/bash
+sudo PORT=80 forever start -a -l /home/ec2-user/howdoivoteforbernie/logs/forever.log -o ./logs/out.log -e ./logs/err.log ./bin/www
+
