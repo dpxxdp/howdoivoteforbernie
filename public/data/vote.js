@@ -1,4 +1,4 @@
-exports.vote = [
+exports.state = [
     {
         "name": "Alabama",
         "abbreviation": "AL",
