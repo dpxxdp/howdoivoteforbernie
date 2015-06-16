@@ -20,7 +20,344 @@ exports.state = [
     {
         "name": "Alaska",
         "abbreviation": "AK",
-        "democratic-primary" : "open",
+        "info" : {
+            "registration" : {
+                //"deadline" : "Postmarked 11 days before election",
+                //"link" : "http://www.alabamavotes.gov/GetRegForm.aspx?m=voters",
+            },
+            "primary" : {
+                //"closed" : "true",
+                //"date" : "2016-03-08",
+                //"seventeen" : "false",
+                //"remarks" : "type whatever comment",
+            },
+            "general" : {
+                //"link" : "http://www.alabamavotes.gov/",
+            },
+        },
+    },
+    {
+        "name": "Alaska",
+        "abbreviation": "AK",
+        "info" : {
+            "registration" : {
+                //"deadline" : "Postmarked 11 days before election",
+                //"link" : "http://www.alabamavotes.gov/GetRegForm.aspx?m=voters",
+            },
+            "primary" : {
+                //"closed" : "true",
+                //"date" : "2016-03-08",
+                //"seventeen" : "false",
+                //"remarks" : "type whatever comment",
+            },
+            "general" : {
+                //"link" : "http://www.alabamavotes.gov/",
+            },
+        },
+    },
+    {
+        "name": "Alaska",
+        "abbreviation": "AK",
+        "info" : {
+            "registration" : {
+                //"deadline" : "Postmarked 11 days before election",
+                //"link" : "http://www.alabamavotes.gov/GetRegForm.aspx?m=voters",
+            },
+            "primary" : {
+                //"closed" : "true",
+                //"date" : "2016-03-08",
+                //"seventeen" : "false",
+                //"remarks" : "type whatever comment",
+            },
+            "general" : {
+                //"link" : "http://www.alabamavotes.gov/",
+            },
+        },
+    },
+    {
+        "name": "Alaska",
+        "abbreviation": "AK",
+        "info" : {
+            "registration" : {
+                //"deadline" : "Postmarked 11 days before election",
+                //"link" : "http://www.alabamavotes.gov/GetRegForm.aspx?m=voters",
+            },
+            "primary" : {
+                //"closed" : "true",
+                //"date" : "2016-03-08",
+                //"seventeen" : "false",
+                //"remarks" : "type whatever comment",
+            },
+            "general" : {
+                //"link" : "http://www.alabamavotes.gov/",
+            },
+        },
+    },
+    {
+        "name": "Alaska",
+        "abbreviation": "AK",
+        "info" : {
+            "registration" : {
+                //"deadline" : "Postmarked 11 days before election",
+                //"link" : "http://www.alabamavotes.gov/GetRegForm.aspx?m=voters",
+            },
+            "primary" : {
+                //"closed" : "true",
+                //"date" : "2016-03-08",
+                //"seventeen" : "false",
+                //"remarks" : "type whatever comment",
+            },
+            "general" : {
+                //"link" : "http://www.alabamavotes.gov/",
+            },
+        },
+    },
+    {
+        "name": "Alaska",
+        "abbreviation": "AK",
+        "info" : {
+            "registration" : {
+                //"deadline" : "Postmarked 11 days before election",
+                //"link" : "http://www.alabamavotes.gov/GetRegForm.aspx?m=voters",
+            },
+            "primary" : {
+                //"closed" : "true",
+                //"date" : "2016-03-08",
+                //"seventeen" : "false",
+                //"remarks" : "type whatever comment",
+            },
+            "general" : {
+                //"link" : "http://www.alabamavotes.gov/",
+            },
+        },
+    },
+    {
+        "name": "Alaska",
+        "abbreviation": "AK",
+        "info" : {
+            "registration" : {
+                //"deadline" : "Postmarked 11 days before election",
+                //"link" : "http://www.alabamavotes.gov/GetRegForm.aspx?m=voters",
+            },
+            "primary" : {
+                //"closed" : "true",
+                //"date" : "2016-03-08",
+                //"seventeen" : "false",
+                //"remarks" : "type whatever comment",
+            },
+            "general" : {
+                //"link" : "http://www.alabamavotes.gov/",
+            },
+        },
+    },
+    {
+        "name": "Alaska",
+        "abbreviation": "AK",
+        "info" : {
+            "registration" : {
+                //"deadline" : "Postmarked 11 days before election",
+                //"link" : "http://www.alabamavotes.gov/GetRegForm.aspx?m=voters",
+            },
+            "primary" : {
+                //"closed" : "true",
+                //"date" : "2016-03-08",
+                //"seventeen" : "false",
+                //"remarks" : "type whatever comment",
+            },
+            "general" : {
+                //"link" : "http://www.alabamavotes.gov/",
+            },
+        },
+    },
+    {
+        "name": "Alaska",
+        "abbreviation": "AK",
+        "info" : {
+            "registration" : {
+                //"deadline" : "Postmarked 11 days before election",
+                //"link" : "http://www.alabamavotes.gov/GetRegForm.aspx?m=voters",
+            },
+            "primary" : {
+                //"closed" : "true",
+                //"date" : "2016-03-08",
+                //"seventeen" : "false",
+                //"remarks" : "type whatever comment",
+            },
+            "general" : {
+                //"link" : "http://www.alabamavotes.gov/",
+            },
+        },
+    },
+    {
+        "name": "Alaska",
+        "abbreviation": "AK",
+        "info" : {
+            "registration" : {
+                //"deadline" : "Postmarked 11 days before election",
+                //"link" : "http://www.alabamavotes.gov/GetRegForm.aspx?m=voters",
+            },
+            "primary" : {
+                //"closed" : "true",
+                //"date" : "2016-03-08",
+                //"seventeen" : "false",
+                //"remarks" : "type whatever comment",
+            },
+            "general" : {
+                //"link" : "http://www.alabamavotes.gov/",
+            },
+        },
+    },
+    {
+        "name": "Alaska",
+        "abbreviation": "AK",
+        "info" : {
+            "registration" : {
+                //"deadline" : "Postmarked 11 days before election",
+                //"link" : "http://www.alabamavotes.gov/GetRegForm.aspx?m=voters",
+            },
+            "primary" : {
+                //"closed" : "true",
+                //"date" : "2016-03-08",
+                //"seventeen" : "false",
+                //"remarks" : "type whatever comment",
+            },
+            "general" : {
+                //"link" : "http://www.alabamavotes.gov/",
+            },
+        },
+    },
+    {
+        "name": "Alaska",
+        "abbreviation": "AK",
+        "info" : {
+            "registration" : {
+                //"deadline" : "Postmarked 11 days before election",
+                //"link" : "http://www.alabamavotes.gov/GetRegForm.aspx?m=voters",
+            },
+            "primary" : {
+                //"closed" : "true",
+                //"date" : "2016-03-08",
+                //"seventeen" : "false",
+                //"remarks" : "type whatever comment",
+            },
+            "general" : {
+                //"link" : "http://www.alabamavotes.gov/",
+            },
+        },
+    },
+    {
+        "name": "Alaska",
+        "abbreviation": "AK",
+        "info" : {
+            "registration" : {
+                //"deadline" : "Postmarked 11 days before election",
+                //"link" : "http://www.alabamavotes.gov/GetRegForm.aspx?m=voters",
+            },
+            "primary" : {
+                //"closed" : "true",
+                //"date" : "2016-03-08",
+                //"seventeen" : "false",
+                //"remarks" : "type whatever comment",
+            },
+            "general" : {
+                //"link" : "http://www.alabamavotes.gov/",
+            },
+        },
+    },
+    {
+        "name": "Alaska",
+        "abbreviation": "AK",
+        "info" : {
+            "registration" : {
+                //"deadline" : "Postmarked 11 days before election",
+                //"link" : "http://www.alabamavotes.gov/GetRegForm.aspx?m=voters",
+            },
+            "primary" : {
+                //"closed" : "true",
+                //"date" : "2016-03-08",
+                //"seventeen" : "false",
+                //"remarks" : "type whatever comment",
+            },
+            "general" : {
+                //"link" : "http://www.alabamavotes.gov/",
+            },
+        },
+    },
+    {
+        "name": "Alaska",
+        "abbreviation": "AK",
+        "info" : {
+            "registration" : {
+                //"deadline" : "Postmarked 11 days before election",
+                //"link" : "http://www.alabamavotes.gov/GetRegForm.aspx?m=voters",
+            },
+            "primary" : {
+                //"closed" : "true",
+                //"date" : "2016-03-08",
+                //"seventeen" : "false",
+                //"remarks" : "type whatever comment",
+            },
+            "general" : {
+                //"link" : "http://www.alabamavotes.gov/",
+            },
+        },
+    },
+    {
+        "name": "Alaska",
+        "abbreviation": "AK",
+        "info" : {
+            "registration" : {
+                //"deadline" : "Postmarked 11 days before election",
+                //"link" : "http://www.alabamavotes.gov/GetRegForm.aspx?m=voters",
+            },
+            "primary" : {
+                //"closed" : "true",
+                //"date" : "2016-03-08",
+                //"seventeen" : "false",
+                //"remarks" : "type whatever comment",
+            },
+            "general" : {
+                //"link" : "http://www.alabamavotes.gov/",
+            },
+        },
+    },
+    {
+        "name": "Alaska",
+        "abbreviation": "AK",
+        "info" : {
+            "registration" : {
+                //"deadline" : "Postmarked 11 days before election",
+                //"link" : "http://www.alabamavotes.gov/GetRegForm.aspx?m=voters",
+            },
+            "primary" : {
+                //"closed" : "true",
+                //"date" : "2016-03-08",
+                //"seventeen" : "false",
+                //"remarks" : "type whatever comment",
+            },
+            "general" : {
+                //"link" : "http://www.alabamavotes.gov/",
+            },
+        },
+    },
+    {
+        "name": "Alaska",
+        "abbreviation": "AK",
+        "info" : {
+            "registration" : {
+                //"deadline" : "Postmarked 11 days before election",
+                //"link" : "http://www.alabamavotes.gov/GetRegForm.aspx?m=voters",
+            },
+            "primary" : {
+                //"closed" : "true",
+                //"date" : "2016-03-08",
+                //"seventeen" : "false",
+                //"remarks" : "type whatever comment",
+            },
+            "general" : {
+                //"link" : "http://www.alabamavotes.gov/",
+            },
+        },
     },
     {
         "name": "Arizona",
