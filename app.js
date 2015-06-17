@@ -30,8 +30,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //STRAY: app.use(methodOverride());
 
-console.log('USING: /api = ' + api);
-console.log('USING: / = ' + routes);
 app.use('/', routes);
 app.use('/api', api);
 //app.use('/users', users);

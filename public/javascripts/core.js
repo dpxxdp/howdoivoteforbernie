@@ -92,4 +92,16 @@ function mainController($scope, $http) {
 			$scope.selectStateByName($scope.currentInput);
 		}
 	};
+
+	$scope.formatDate = function(dateString) {
+		var date = new Date(dateString);
+		var month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][date.getMonth()];
+		var week = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][date.getDay()];
+		return week + ' ' + month + ' ' + date.getDate() + ', ' + date.getFullYear();
+	};
+
+	$scope.formatRegistration = function(deadline) {
+		return deadline;//TODO: smart handling of registration rule combined with election date
+	};
+
 }
