@@ -8,6 +8,7 @@ var voteInfo = require('../public/data/voteInfo.js');
 
 /* GET home page. */
 router.get('/v0.1', function(req, res) {
+	console.log('MADE IT HERE: A');
 	res.json(voteInfo);
 });
 
