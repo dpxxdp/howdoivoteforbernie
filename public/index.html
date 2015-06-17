@@ -7,7 +7,7 @@
 	
 		<title>HowDoIVoteForBernie.com</title>
 	
-		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 	
 		<style>
 	        html                    { overflow-y:scroll; }
@@ -27,15 +27,55 @@
         	    <h1>HowToVoteForBernie.com</h1>
         	</div>
 
-        	selectedState={{ selectedState.name }}
+        	<form class="form-inline">
+  				<div class="form-group">
+    				<label for="stateInput"></label>
+    				<input type="text" class="form-control input-lg" ng-model="currentInput" id="currentInput" placeholder="Your state"><!-- TODO: initialize with Browser Specific location -->
+  				</div>
+  				<button ng-click="selectStateFromCurrentInput()" type="submit" class="btn btn-default btn-info btn-lg">Return</button>
+			</form>
 
-  <ul>
-    <div class="dropdown-menu-item" ng-repeat="i in voteInfo.states">
-    	<li ng-click="selectState(i.abbreviation)">{{i.name}}</li>
-    </div>
-  </ul>
-			state= {{ voteInfo }}
-			</p>
+        	<!-- <div class="dropdown" style="margin-bottom:20px"> -->
+  				<!-- <button class="btn btn-info btn-default btn-lg dropdown-toggle" type="button" id="stateDropDownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Choose Your State<span class="caret"></span> -->
+  				<!-- </button> -->
+  				<!-- <ul class="dropdown-menu" aria-labelledby="stateDropDownMenu"> -->
+  					<!-- <div class="dropdown-menu-item" ng-repeat="i in voteInfo.states"> -->
+  		  				<!-- <li ng-click="selectState(i.abbreviation)">{{i.name}}</li> -->
+  		 			<!-- </div> -->
+  		 		<!-- </ul> -->
+    		<!-- </div> -->
+
+        	<div class="jumbotron" ng-show="getSelectedState()">
+        		<h2>{{ selectedState.name }}</h2>
+        		<br>
+        		<div class="lead" ng-show="selectedState.info.primary.closed">
+        			<p class="lead">Your state's Democratic Primary is closed!  You will have to register as a Democrat to vote for Bernie in the {{selectedState.name}} primaries.</p>
+        		</div>
+        		<div class="lead" ng-show="selectedState.info.primary.date">
+        			<p>Your Democratic Primary is scheduled for {{selectedState.info.primary.date}}.</p>
+        		</div>
+        		<div class="lead" ng-show="selectedState.info.registration.link">
+        			<p>Register to vote in your state here: <a href="{{selectedState.info.registration.link}}">{{selectedState.name}} Civic Duty Calls</a></p>
+        		</div>
+        		<div class="lead" ng-show="selectedState.info.registration.deadline">
+        			<p>Registration Deadline: {{selectedState.info.registration.deadline}}
+        		</div>
+        		<div class="lead" ng-show="areWeMissingInformation()">
+        			<p>It looks like we are missing information that we'd like to know about your state!  This is a crowd-sourced information depo.  If you'd like to help out <a href="/act.html">start right now!</a></p>
+        		</div>
+       		</div>
+
+       	</div>
+
+  		<!-- <ul> -->
+  		  <!-- <div class="dropdown-menu-item" ng-repeat="i in voteInfo.states"> -->
+  		  	<!-- <li ng-click="selectState(i.abbreviation)">{{i.name}}</li> -->
+  		  <!-- </div> -->
+  		<!-- </ul> -->
+
+
+			<!-- selected state= {{ selectedState.name }} -->
+			<!-- </p> -->
         	<!-- <div id="state-list" class="row"> -->
         	    <!-- <div class="col-sm-4 col-sm-offset-4"> -->
 	<!--  -->
