@@ -1,4 +1,4 @@
-exports.state = [
+exports.states = [
     {
         "name": "Alabama",
         "abbreviation": "AL",

@@ -4,23 +4,23 @@ var fs = require('fs'),
 
 var express = require('express');
 var router = express.Router();
-var voteInfo = require('../public/data/vote.js');
+var voteInfo = require('../public/data/voteInfo.js');
 
 /* GET home page. */
 router.get('/v0.1', function(req, res) {
 	res.json(voteInfo);
 });
 
-router.get('/v0.1/:state', function(req, res) {
-	var state = req.params.state.toUpperCase();
+router.get('/v0.1/:abbrev', function(req, res) {
+	var abbrev = req.params.abbrev.toUpperCase();
 	var success = false;
-	for (var i = 0; i < voteInfo.state.length; i++) {
-		if(voteInfo.state[i].abbreviation === state) {
-			res.json(voteInfo.state[i]);
+	for (var i = 0; i < voteInfo.states.length; i++) {
+		if(voteInfo.states[i].abbreviation === abbrev) {
+			res.json(voteInfo.states[i]);
 			success = true;
 		}
 	}
-	if(!success) { res.send(state + ' is not a US state!'); }
+	if(!success) { res.send(abbrev + ' is not a US state!'); }
 });
 
 module.exports = router;
