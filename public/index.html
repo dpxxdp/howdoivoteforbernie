@@ -29,102 +29,28 @@
         	</div>
 
 			<div class="row">
-			<div class="col-xs-12 col-md-4">
-			<form class="form-inline" style="margin:-18px 0px 12px -3px">
-  				<div class="form-group">
-    				<label for="stateInput"></label>
-    				<input type="text" class="form-control input-lg" ng-model="currentInput" id="currentInput" placeholder="Your state"><!-- TODO: initialize with Browser Specific location -->
-  				</div>
-  				<button ng-click="selectStateFromCurrentInput()" type="submit" class="btn btn-default btn-info btn-lg"><div class="glyphicon glyphicon-chevron-right"></div></button>
-			</form>
-		</div>
+
+				<div class="col-xs-12 col-md-4">
+					<form class="form-inline" style="margin:-18px 0px 12px -3px">
+  						<div class="form-group">
+    						<label for="stateInput"></label>
+    						<input type="text" class="form-control input-lg" ng-model="currentInput" id="currentInput" placeholder="Your state"><!-- TODO: initialize with Browser Specific location -->
+  						</div>
+  						<button ng-click="selectStateFromCurrentInput()" type="submit" class="btn btn-default btn-info btn-lg"><div class="glyphicon glyphicon-chevron-right"></div></button>
+					</form>
+				</div>
 
 			</div>
 
-			  	<div class="small" ng-show="error" style="position:right">
-        			<h4>{{error}}</h4>
-       			</div>
+			<div class="small" ng-show="error" style="position:right">
+        		<h4>{{error}}</h4>
+       		</div>
 
-        	<div class="jumbotron" ng-show="showSelectedState()">
+        	<div class="jumbotron" ng-show="showJumbo()">
 
-        		<div class="row">
-        			<h2>{{ selectedState.name }}</h2>
-        			<br>
-        		</div>
-
-        		<div class="row">
-
-        			<div class="col-xs-12 col-md-4" ng-show="selectedState.info.primary.closed" style="margin:5px 0px 5px 0px">
-        				<div class="panel state-info-panel" style="background-color:#5BC0DE; height:100%">
-        					<div class="text-left text-error">
-        						<p class="lead" style="padding:8px">Your state party has a closed primary system.  This means <b>you must register as a Democrat</b> to vote for Bernie in the {{selectedState.name}} primaries.</p>
-        					</div>
-        				</div>
-        			</div>
-
-        			<div class="col-xs-12 col-md-4" ng-show="selectedState.info.primary.date" style="margin:5px 0px 5px 0px">
-        				<div class="state-info-panel" style="height:100%">
-        					<div class="text-center">
-        						<div class="row">
-        							<h4>Your Democratic Primary happens on</h4>
-        						</div>
-        						<div class="row" style="padding:20px 0px 10px 0px">
-        							<p class="col-xs-12 col-md-12 lead" style="padding:5px"><b>{{formatDate(selectedState.info.primary.date)}}</b></p>
-        						</div>
-        						<div class="row" style="padding:0px 0px 10px 0px">
-        							<a href="./remind.html">
-        								<button type="button" class="btn btn-default btn-lg">
-  											<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Remind Me To Vote
-										</button>
-									</a>
-								</div>
-        					</div>
-        				</div>
-        			</div>
-
-        			<div class="col-xs-12 col-md-4" ng-show="selectedState.info.registration.deadline" style="margin:5px 0px 5px 0px">
-        				<div class="panel state-info-panel" style="height:180px">
-        					<div class="text-center">
-        						<div class="row">
-        							<h4>Your voter registration deadline</h4>
-        						</div>
-        						<div class="row" style="white-space:normal;padding:20px 0px 25px 0px">
-        							<p class="lead" style="font-size:15px">{{formatRegistration(selectedState.info.registration.deadline)}}</p>
-        						</div>
-        						<div class="row" style="padding:0px 0px 10px 0px">
-        							<a href="./remind.html">
-        								<button type="button" class="btn btn-default btn-lg btn-danger">
-  											<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Remind Me To Register
-										</button>
-									</a>
-								</div>
-        					</div>
-        				</div>
-        			</div>
-
-        		</div>
-        		<div class="row" ng-show="selectedState.info.registration.link">
-
-        			<div class="col-xs-12 col-md-12" style="margin:5px 0px 5px 0px">
-        				<a href="{{selectedState.info.registration.link}}">
-        					<button type="button" class="btn btn-default btn-lg btn-primary" style="height:100px; width:100%; white-space:normal">
-  								<span class="glyphicon glyphicon-check" aria-hidden="true"></span> Register To Vote in {{selectedState.name}}
-							</button>
-						</a>
-        			</div>
-
-				</div>
-				<div class="row" g-show="areWeMissingInformation()">
-
-					<div class="col-xs-12 col-md-12" style="margin:5px 0px 5px 0px">
-        				<div class="panel state-info-panel" style="background-color:#999999; height:100%">
-        					<div class="lead text-left text-error" style="margin:8px">
-        						<p>It looks like we are missing some information that we'd like to know about your state.  This is a crowd-sourced information depo so if you have 5 minutes to give we could use your help! <a href="./act.html"><button type="button" class="btn btn-default btn-xs btn-info" style="white-space:normal"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Contribute</button></a>
-        						</p>
-        					</div>
-        				</div>
-        			</div>
-        		</div>
+				<div ng-include="'./views/selectedStateInfo.html'" ng-show="showSelectedStateInfo()"></div>
+				<div ng-include="'./views/remind.html'" ng-show="showRemindInfo()"></div>
+				<div ng-include="'./views/act.html'" ng-show="showActInfo()"></div>
 
        		</div>
 

@@ -10,6 +10,7 @@ function mainController($scope, $http) {
 	$scope.currentInput = '';
 	$scope.error = '';
 	$scope.showFooter = false;
+	$scope.view = '';
 
 	// $http.get('/api/v0.1') TODO: Sort out api bug
 	$http.get('./data/states.json')
@@ -67,17 +68,29 @@ function mainController($scope, $http) {
 	};
 
 
-	$scope.showSelectedState = function() {
-		return ($scope.selectedState && $scope.selectedState.name && !$scope.error);
+	$scope.showSelectedStateInfo = function() {
+		return ($scope.selectedState && $scope.selectedState.name && !$scope.error && $scope.view==='info');
+	};
+
+	$scope.showActInfo = function() {
+		return ($scope.view==='act');
+	};
+
+	$scope.showRemindInfo = function() {
+		return ($scope.selectedState && $scope.selectedState.name && !$scope.error && $scope.view==='remind');
+	};
+
+	$scope.showJumbo = function() {
+		return ($scope.showRemindInfo() || $scope.showActInfo() || $scope.showSelectedStateInfo());
 	};
 
 	$scope.areWeMissingInformation = function() {
-		//console.log($scope.selectedState);
 		return !$scope.selectedState.info || !$scope.selectedState.registration;
 	};
 
 	$scope.selectStateFromCurrentInput = function() {
 		$scope.showFooter = true;
+		$scope.view = 'info';
 		if($scope.currentInput.length===0)
 		{
 			$scope.selectedState = {};
@@ -93,7 +106,6 @@ function mainController($scope, $http) {
 	};
 
 	$scope.formatDate = function(dateString) {
-		console.log(dateString);
 		var date = new Date(dateString);
 		var month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][date.getUTCMonth()];
 		var week = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][date.getUTCDay()];
@@ -102,6 +114,14 @@ function mainController($scope, $http) {
 
 	$scope.formatRegistration = function(deadline) {
 		return deadline;//TODO: smart handling of registration rule combined with election date
+	};
+
+	$scope.selectRemindInfo = function() {
+		$scope.view = 'remind';
+	};
+
+	$scope.selectActInfo = function() {
+		$scope.view = 'act';
 	};
 
 }
