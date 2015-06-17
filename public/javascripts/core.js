@@ -15,7 +15,6 @@ function mainController($scope, $http) {
 	$http.get('./data/states.json')
 		.success(function(data) {
 			$scope.voteInfo = data;
-			console.log(data);
 		})
 		.error(function(data) {
 			console.log('Error: ' + data);
@@ -25,7 +24,6 @@ function mainController($scope, $http) {
 		$http.get('/api/v0.1/' + state)
 			.success(function(data) {
 				$scope.selectedState = data;
-				console.log(data);
 			})
 			.error(function(data) {
 				console.log('Error: '+ data);
@@ -99,8 +97,6 @@ function mainController($scope, $http) {
 		var date = new Date(dateString);
 		var month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][date.getUTCMonth()];
 		var week = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][date.getUTCDay()];
-		console.log(date.toString());
-		console.log(date.getUTCDate());
 		return week + ' ' + month + ' ' + date.getUTCDate() + ', ' + date.getFullYear();
 	};
 
