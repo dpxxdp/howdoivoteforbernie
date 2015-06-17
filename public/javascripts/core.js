@@ -9,6 +9,7 @@ function mainController($scope, $http) {
 	$scope.stateCache = {};
 	$scope.currentInput = '';
 	$scope.error = '';
+	$scope.showFooter = false;
 
 	$http.get('/api/v0.1')
 		.success(function(data) {
@@ -44,7 +45,7 @@ function mainController($scope, $http) {
 		}
 		if(success !== true) {
 			console.log('Error: Cannot select state: ' + abbrev);
-			$scope.error = abbrev + ' is not a US state!';
+			$scope.error = 'Please select a US state.';
 		}
 	};
 
@@ -62,22 +63,29 @@ function mainController($scope, $http) {
 		}
 		if(success !== true) {
 			console.log('Error: Cannot select state: ' + name);
-			$scope.error = name + ' is not a US state!';
+			$scope.error = 'Please select a US state.';
 		}
 	};
 
 
-	$scope.getSelectedState = function() {
-		return ($scope.selectedState && $scope.selectedState.name);
+	$scope.showSelectedState = function() {
+		return ($scope.selectedState && $scope.selectedState.name && !$scope.error);
 	};
 
 	$scope.areWeMissingInformation = function() {
 		//console.log($scope.selectedState);
-		return !$scope.selectedState.info;
+		return !$scope.selectedState.info || !$scope.selectedState.registration;
 	};
 
 	$scope.selectStateFromCurrentInput = function() {
-		if($scope.currentInput.length===2) {
+		$scope.showFooter = true;
+		if($scope.currentInput.length===0)
+		{
+			$scope.selectedState = {};
+			$scope.error = '';
+			return;
+		}
+		else if($scope.currentInput.length===2) {
 			$scope.selectStateByAbbrev($scope.currentInput);
 		}
 		else {

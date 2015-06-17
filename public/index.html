@@ -21,19 +21,30 @@
 	</head>
 
 	<body ng-controller="mainController">
+		<!-- <a href="https://github.com/dpxxdp/howdoivoteforbernie"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a> -->
 		<div class="container">
         	
         	<div class="jumbotron text-center">
         	    <h1>HowToVoteForBernie.com</h1>
         	</div>
 
-        	<form class="form-inline">
+			<div class="row">
+			<div class="col-xs-12 col-md-4">
+			<form class="form-inline" style="margin:-18px 0px 12px -3px">
   				<div class="form-group">
     				<label for="stateInput"></label>
     				<input type="text" class="form-control input-lg" ng-model="currentInput" id="currentInput" placeholder="Your state"><!-- TODO: initialize with Browser Specific location -->
   				</div>
-  				<button ng-click="selectStateFromCurrentInput()" type="submit" class="btn btn-default btn-info btn-lg">Return</button>
+  				<button ng-click="selectStateFromCurrentInput()" type="submit" class="btn btn-default btn-info btn-lg"><div class="glyphicon glyphicon-chevron-right"></div></button>
 			</form>
+		</div>
+
+			</div>
+
+			  	<div class="small" ng-show="error" style="position:right">
+        			<h4>{{error}}</h4>
+       			</div>
+
 
         	<!-- <div class="dropdown" style="margin-bottom:20px"> -->
   				<!-- <button class="btn btn-info btn-default btn-lg dropdown-toggle" type="button" id="stateDropDownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Choose Your State<span class="caret"></span> -->
@@ -45,7 +56,7 @@
   		 		<!-- </ul> -->
     		<!-- </div> -->
 
-        	<div class="jumbotron" ng-show="getSelectedState()">
+        	<div class="jumbotron" ng-show="showSelectedState()">
         		<h2>{{ selectedState.name }}</h2>
         		<br>
         		<div class="lead" ng-show="selectedState.info.primary.closed">
@@ -61,8 +72,13 @@
         			<p>Registration Deadline: {{selectedState.info.registration.deadline}}
         		</div>
         		<div class="lead" ng-show="areWeMissingInformation()">
-        			<p>It looks like we are missing information that we'd like to know about your state!  This is a crowd-sourced information depo.  If you'd like to help out <a href="/act.html">start right now!</a></p>
+        			<p>It looks like we are missing information that we'd like to know about your state!  This is a crowd-sourced information depo.  If you'd like to help out you can<a href="/act.html"> dive right in!</a></p>
         		</div>
+
+       		</div>
+
+       		<div class="footer" ng-show="showFooter">
+       			<h4 >This is an open source information repository.  Our goal is to make voting as frictionless as possible. If you'd like to contribute, <a href="https://github.com/dpxxdp/howdoivoteforbernie">Fork me on Github</a> or <a href="/act">contact the team.</a></h4>
        		</div>
 
        	</div>
