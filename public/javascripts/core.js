@@ -11,7 +11,8 @@ function mainController($scope, $http) {
 	$scope.error = '';
 	$scope.showFooter = false;
 
-	$http.get('/api/v0.1')
+	// $http.get('/api/v0.1') TODO: Sort out api bug
+	$http.get('./data/states.json')
 		.success(function(data) {
 			$scope.voteInfo = data;
 			console.log(data);
@@ -94,10 +95,13 @@ function mainController($scope, $http) {
 	};
 
 	$scope.formatDate = function(dateString) {
+		console.log(dateString);
 		var date = new Date(dateString);
-		var month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][date.getMonth()];
-		var week = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][date.getDay()];
-		return week + ' ' + month + ' ' + date.getDate() + ', ' + date.getFullYear();
+		var month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][date.getUTCMonth()];
+		var week = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][date.getUTCDay()];
+		console.log(date.toString());
+		console.log(date.getUTCDate());
+		return week + ' ' + month + ' ' + date.getUTCDate() + ', ' + date.getFullYear();
 	};
 
 	$scope.formatRegistration = function(deadline) {
