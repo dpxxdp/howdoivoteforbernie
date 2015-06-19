@@ -20,94 +20,279 @@
     {
         "name": "Alaska",
         "abbreviation": "AK",
-        "democratic-primary" : "closed"
+        "info" : {
+            "registration" : {
+                "deadline" : "Received 30 days before the election.",
+                "link" : "http://www.elections.state.ak.us/vi_voter_reg.php"
+            },
+            "primary" : {
+                "closed" : "false",
+                "date" : "TBD",
+                "seventeen" : "false",
+                "remarks" : "Blanket primary for four of five registered parties. Republicans use closed primary."
+            }
+        }
     },
     {
         "name": "Arizona",
         "abbreviation": "AZ",
-        "democratic-primary" : "closed"
+        "info" : {
+            "registration" : {
+                "deadline" : "Received 29 days before the election.",
+                "link" : "http://www.azsos.gov/elections/voting-election/register-vote-or-update-your-current-voter-information"
+            },
+            "primary" : {
+                "closed" : "true",
+                "date" : "2016-03-22",
+                "seventeen" : "false",
+                "remarks" : "Open for Unaffiliated voters only"
+            }
+        }
     },
     {
         "name": "Arkansas",
         "abbreviation": "AR",
-        "democratic-primary" : "open"
+        "info" : {
+            "registration" : {
+                "deadline" : "Postmarked 30 days before the election.",
+                "link" : "http://www.sos.arkansas.gov/elections/Pages/voterRegistration.aspx"
+            },
+            "primary" : {
+                "closed" : "false",
+                "date" : "2016-05-24",
+                "seventeen" : "false",
+                "remarks" : "Voter must vote in runoff primary of same party."
+            }
+        }
     },
     {
         "name": "California",
         "abbreviation": "CA",
-        "democratic-primary" : "closed"
+        "info" : {
+            "registration" : {
+                "deadline" : "Postmarked 15 days before the election",
+                "link" : "http://registertovote.ca.gov/"
+            },
+            "primary" : {
+                "closed" : "false",
+                "date" : "2016-06-07",
+                "seventeen" : "false"
+            }
+        }
     },
     {
         "name": "Colorado",
         "abbreviation": "CO",
-        "democratic-primary" : "closed"
+        "info" : {
+            "registration" : {
+                "deadline" : "Postmarked 22 days before an election if through a voter registration drive. All other applicants may register at any time through Election Day",
+                "link" : "http://www.sos.state.co.us/pubs/elections/main.html"
+            },
+            "primary" : {
+                "closed" : "true",
+                "date" : "2016-03-01",
+                "seventeen" : "false"
+            }
+        }
     },
     {
         "name": "Connecticut",
         "abbreviation": "CT",
-        "democratic-primary" : "closed"
+        "info" : {
+            "registration" : {
+                "deadline" : "Postmarked 14 days before the election",
+                "link" : "http://www.sots.ct.gov/sots/cwp/view.asp?a=3172&q=525432"
+            },
+            "primary" : {
+                "closed" : "true",
+                "date" : "2016-04-26",
+                "seventeen" : "true"
+            }
+        }
     },
     {
         "name": "Delaware",
         "abbreviation": "DE",
-        "democratic-primary" : "closed"
+        "info" : {
+            "registration" : {
+                "deadline" : "Postmarked by the fourth Saturday before a general or primary election",
+                "link" : "https://ivote.de.gov/"
+            },
+            "primary" : {
+                "closed" : "true",
+                "date" : "2016-04-26",
+                "seventeen" : "false"
+            }
+        }
     },
     {
-        "name": "District Of Columbia",
+        "name": "District of Columbia",
         "abbreviation": "DC",
-        "democratic-primary" : "closed"
+        "info" : {
+            "registration" : {
+                "deadline" : "Postmarked 30 days before the election.",
+                "link" : "https://www.vote4dc.com/Voter/Home/SearchMain"
+            },
+            "primary" : {
+                "closed" : "true",
+                "date" : "2016-04-05",
+                "seventeen" : "false"
+            }
+        }
     },
     {
         "name": "Florida",
         "abbreviation": "FL",
-        "democratic-primary" : "closed"
+        "info" : {
+            "registration" : {
+                "deadline" : "Postmarked 29 days before the election.",
+                "link" : "http://dos.myflorida.com/elections/for-voters/voter-registration/"
+            },
+            "primary" : {
+                "closed" : "true",
+                "date" : "2016-03-15",
+                "seventeen" : "false"
+            }
+        }
     },
     {
         "name": "Georgia",
         "abbreviation": "GA",
-        "democratic-primary" : "open"
+        "info" : {
+            "registration" : {
+                "deadline" : "Postmarked by the fifth Monday before the election.",
+                "link" : "https://registertovote.sos.ga.gov/GAOLVR/welcome.do#no-back-button"
+            },
+            "primary" : {
+                "closed" : "false",
+                "date" : "TBD",
+                "seventeen" : "false",
+                "remarks" : "Voter must vote in runoff primary of same party."
+            }
+        }
     },
     {
         "name": "Hawaii",
         "abbreviation": "HI",
-        "democratic-primary" : "open"
+        "info" : {
+            "registration" : {
+                "deadline" : "Received at least 30 days before the election.",
+                "link" : "http://hawaii.gov/elections/voters/registration.htm"
+            },
+            "primary" : {
+                "closed" : "false",
+                "date" : "TBD",
+                "seventeen" : "true"
+            }
+        }
     },
     {
         "name": "Idaho",
         "abbreviation": "ID",
-        "democratic-primary" : "open"
+        "info" : {
+            "registration" : {
+                "deadline" : "Postmarked 25 days before the election.",
+                "link" : "http://www.idahovotes.gov/voter_info.shtml"
+            },
+            "primary" : {
+                "closed" : "false",
+                "date" : "TBD",
+                "seventeen" : "false"
+            }
+        }
     },
     {
         "name": "Illinois",
         "abbreviation": "IL",
-        "democratic-primary" : "open",
-        "remarks" : "Must vote in primary of same party as last primary vote.  Loosely enforced.  (lol wut?)"
+        "info" : {
+            "registration" : {
+                "deadline" : "Postmarked 28 days before the election.",
+                "link" : "http://www.elections.il.gov/InfoForVoters.aspx"
+            },
+            "primary" : {
+                "closed" : "true",
+                "date" : "2016-03-015",
+                "seventeen" : "true",
+                "remarks" : "Must vote in primary of same party as last primary vote. Loosely enforced."
+            }
+        }
     },
     {
         "name": "Indiana",
         "abbreviation": "IN",
-        "democratic-primary" : "open"
+        "info" : {
+            "registration" : {
+                "deadline" : "Postmarked 29 days before the election.",
+                "link" : "https://indianavoters.in.gov/PublicSite/PublicMain.aspx?AspxAutoDetectCookieSupport=1"
+            },
+            "primary" : {
+                "closed" : "false",
+                "date" : "2016-05-03",
+                "seventeen" : "true"
+            }
+        }
     },
     {
         "name": "Iowa",
         "abbreviation": "IA",
-        "democratic-primary" : "open",
-        "remarks" : "Voter may change registration at the polls."
+        "info" : {
+            "registration" : {
+                "deadline" : "Postmarked 15 days before the election",
+                "link" : "https://sos.iowa.gov/elections/voterinformation/"
+            },
+            "primary" : {
+                "closed" : "true",
+                "date" : "2016-02-01",
+                "seventeen" : "true",
+                "remarks" : "Voter may change registration at polls."
+            }
+        }
     },
     {
         "name": "Kansas",
         "abbreviation": "KS",
-        "democratic-primary" : "closed"
+        "info" : {
+            "registration" : {
+                "deadline" : "Postmarked 21 days before the election",
+                "link" : "http://www.kssos.org/elections/elections_registration.html"
+            },
+            "primary" : {
+                "closed" : "true",
+                "date" : "TBD",
+                "seventeen" : "true"
+            }
+        }
     },
     {
         "name": "Kentucky",
         "abbreviation": "KY",
-        "democratic-primary" : "closed"
+        "info" : {
+            "registration" : {
+                "deadline" : "Postmarked 29 days before the election.",
+                "link" : "http://elect.ky.gov/Pages/default.aspx"
+            },
+            "primary" : {
+                "closed" : "true",
+                "date" : "2016-05-17",
+                "seventeen" : "true"
+            }
+        }
     },
     {
         "name": "Louisiana",
         "abbreviation": "LA",
-        "democratic-primary" : "open"
+        "info" : {
+            "registration" : {
+                "deadline" : "Received 30 days before the election.",
+                "link" : "http://www.sos.la.gov/ElectionsAndVoting/Pages/OnlineVoterRegistration.aspx?Referrer=https://www.google.com/"
+            },
+            "primary" : {
+                "closed" : "false",
+                "date" : "2016-03-05",
+                "seventeen" : "false",
+                "remarks" : "Effectively open. Top-two runoff system (cajun primary) used. Closed primary used for Congressional races after 2006."
+            }
+        }
     },
     {
         "name": "Maine",

@@ -106,10 +106,17 @@ function mainController($scope, $http) {
 	};
 
 	$scope.formatDate = function(dateString) {
-		var date = new Date(dateString);
-		var month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][date.getUTCMonth()];
-		var week = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][date.getUTCDay()];
-		return week + ' ' + month + ' ' + date.getUTCDate() + ', ' + date.getFullYear();
+		var time = Date.parse(dateString);
+		if(isNaN(time))
+		{
+			return dateString;
+		}
+		else {
+			var date = new Date(time);
+			var month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][date.getUTCMonth()];
+			var week = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][date.getUTCDay()];
+			return week + ' ' + month + ' ' + date.getUTCDate() + ', ' + date.getFullYear();
+		}
 	};
 
 	$scope.formatRegistration = function(deadline) {
